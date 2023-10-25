@@ -1,5 +1,3 @@
-package edu.temple.fragmentrefactor
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,13 +6,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import edu.temple.fragmentrefactor.R
 
 class MyFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.activity_main, container, false)
+        val view = inflater.inflate(R.layout.fragment, container, false)
         val displayTextView = view.findViewById<TextView>(R.id.displayTextView)
         val nameEditText = view.findViewById<EditText>(R.id.nameEditText)
         val changeButton = view.findViewById<Button>(R.id.changeButton)
